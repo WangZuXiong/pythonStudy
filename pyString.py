@@ -1,11 +1,10 @@
 def foo():
-    StringFunction()
-
     #  python三引号允许一个字符串跨多行
     print("""
     string1
         string 2
     """)
+    StringFunction()
 
 
 def StringFunction():
@@ -46,3 +45,48 @@ def StringFunction():
     # 方法检测字符串是否由字母和数字组成。
     print("aaa".isalnum())  # True
     print("aaa".isalnum())
+    # 字符串是否标题化
+    print("This Is Title".istitle())
+    print("this is Title".istitle())
+    # 字符串的拼接
+    seq = ("a", "b", "c")
+    print("+".join(seq))
+    # 字符串的长度
+    print(len("123"))
+
+    print("**".ljust(5, "-"))
+    print("**".rjust(5, "-"))
+    print("**".zfill(5))  # 用0来填充
+
+    print("   abc".lstrip())  # abc
+    print("QQQabc".lstrip("Q"))  # abc
+
+    # 两个字符串的长度必须相同，为一一对应的关系。
+    intab = "abc"
+    outtab = "123"
+    trantab = str.maketrans(intab, outtab)
+    rawStr = "abcde"
+    print(rawStr.translate(trantab))  # 123de
+
+    print(max("abcABC"))  # c
+    print(min("abcABC"))  # A
+
+    print("aaabbb".replace("a", "A"))  # AAAbbb
+    print("aaabbb".replace("a", "A", 1))  # Aaabbb
+
+    # TODO
+    print("this is really a string example....wow!!!".rfind("is"))  # 5
+    print("aaa is a".rfind("aaa"))  # 0
+
+    # 截取字符串 num：截取的次数
+    print("a b c".split(" "))  # ['a', 'b', 'c']
+    print("a b c".split(" ", 1))  # ['a', 'b c']
+    print("a b c".split(" ", 2))  # ['a', 'b', 'c']
+
+    str1 = """123
+    456 789"""
+
+    print(str1.splitlines())  # ['123', '    456 789']
+    print(str1.splitlines(True))  # ['123\n', '    456 789']
+    print(str1.startswith("1"))  # True
+    print("aaa  bbb ccc".title())  # Aaa  Bbb Ccc

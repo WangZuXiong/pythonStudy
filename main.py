@@ -2,9 +2,13 @@
 
 # 按 ⌃R 执行或将其替换为您的代码。
 # 按 双击 ⇧ 在所有地方搜索类、文件、工具窗口、操作和设置。
+import pyCoding
 import pyDictionary
+import pyIter
 import pyList
+import pyLoop
 import pyNumber
+import pySet
 import pyString
 import pyTuple
 
@@ -23,6 +27,9 @@ if __name__ == '__main__':
     # print_hi('PyCharm')
     # pyList.foo()
     # pyTuple.foo()
-    pyDictionary.foo()
-
+    # pyDictionary.foo()
+    # pySet.foo()
+    # pyCoding.foo()
+    # pyLoop.foo()
+    pyIter.foo()
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

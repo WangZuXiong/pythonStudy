@@ -31,5 +31,9 @@ if __name__ == '__main__':
     # pySet.foo()
     # pyCoding.foo()
     # pyLoop.foo()
-    pyIter.foo()
+    # pyIter.foo()
+    # print(pyLoop.__a)
+    # 查看py预定义的变量
+    import builtins
+    print(dir(builtins))
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

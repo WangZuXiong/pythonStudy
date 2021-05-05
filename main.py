@@ -6,6 +6,7 @@ import pyCoding
 import pyDataStructure
 import pyDictionary
 import pyFunction
+import pyInputOutput
 import pyIter
 import pyList
 import pyLoop
@@ -60,16 +61,18 @@ if __name__ == '__main__':
 
     # import pyModule
     # pyModule.foo()
-    from pyModule import *
+    # from pyModule import *
+    # print(vara)  # 100
+    # # print(_varb)  # NameError: name '_varb' is not defined    这将把所有的名字都导入进来，但是那些由单一下划线（_）开头的名字不在此例
+    # name_test()  # 我来自另一个模块
+    # name_test_inside()  # 我来自另一个模块
+    # print(__name__ == "__main__")  # True
+    # print(dir(sys))
 
-    print(vara)  # 100
-    # print(_varb)  # NameError: name '_varb' is not defined    这将把所有的名字都导入进来，但是那些由单一下划线（_）开头的名字不在此例
-    name_test()  # 我来自另一个模块
-
-    name_test_inside()  # 我来自另一个模块
-
-    print(__name__ == "__main__")  # True
-
-    print(dir(sys))
+    # pyInputOutput.str_and_repr()
+    # pyInputOutput.output_format_test()
+    # pyInputOutput.inoput_test()
+    # pyInputOutput.write_file()
+    pyInputOutput.pickle_test()
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

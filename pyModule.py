@@ -12,7 +12,7 @@ def foo():
 
 
 def name_test():
-    print(__name__ == "__pyModule__")  # False
+    print(__name__)  # pyModule
 
     if __name__ == "__main__":
         print("程序自身在运行")

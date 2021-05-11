@@ -5,6 +5,7 @@
 import pyCoding
 import pyDataStructure
 import pyDictionary
+import pyErrorExecptions
 import pyFunction
 import pyInputOutput
 import pyIter
@@ -73,6 +74,7 @@ if __name__ == '__main__':
     # pyInputOutput.output_format_test()
     # pyInputOutput.inoput_test()
     # pyInputOutput.write_file()
-    pyInputOutput.pickle_test()
+    # pyInputOutput.pickle_test()
+    pyErrorExecptions.foo()
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

@@ -40,9 +40,9 @@ def inoput_test():
 
 
 def write_file():
-    # print(sys.path)
-    # 将字符串写入本地文本
-    file = "/Users/wangzuxiong/Documents/GitHub/pythonStudy/file.txt"
+    print(sys.path)
+    # 将字符串写入本地文本·
+    file = sys.path[0] + "/file.txt"
     mode = "w"
     f = open(file, mode)
     num = f.write("py input test")
@@ -60,14 +60,14 @@ def write_file():
 def pickle_test():
     # 序列化
     obj = {"x": 100, "name": "wzx"}
-    file = "/Users/wangzuxiong/Documents/GitHub/pythonStudy/file.txt"
+    file = sys.path[0] + "/file.txt"
     mode = "wb"
     f = open(file, mode)
-    pickle.dump(obj, f,-1)
+    pickle.dump(obj, f, -1)
     f.close()
     # 反序列化
     mode = "rb"
-    f = open(file,mode)
+    f = open(file, mode)
     data = pickle.load(f)
     print(data)
     f.close()

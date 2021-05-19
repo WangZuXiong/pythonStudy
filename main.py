@@ -6,6 +6,7 @@ import pyCoding
 import pyDataStructure
 import pyDictionary
 import pyErrorExecptions
+import pyFast
 import pyFunction
 import pyInputOutput
 import pyIter
@@ -75,6 +76,7 @@ if __name__ == '__main__':
     # pyInputOutput.inoput_test()
     # pyInputOutput.write_file()
     # pyInputOutput.pickle_test()
-    pyErrorExecptions.foo()
+    # pyErrorExecptions.foo()
 
+    print(pyFast.compact([True, False, 1, "2223"]))
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

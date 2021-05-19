@@ -31,3 +31,16 @@ def split_list(raw_list, count):
             group_index += 1
         result[group_index].append(data)
     return result
+
+
+def compact(lst):
+    # 过滤函数
+    def filter_function(obj):
+        if type(obj) == bool:
+            return False
+        return True
+
+    # filter_function 返回是True时  就会过滤掉这个元素
+    temp = filter(filter_function, lst)
+    print(temp)  # <filter object at 0x000002C3E1A873A0>
+    return list(temp)

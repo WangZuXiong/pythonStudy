@@ -14,7 +14,7 @@ import pyInputOutput
 import pyIter
 import pyList
 import pyLoop
-
+import pyStaticTest
 import pyNumber
 import pySet
 import pyString
@@ -87,10 +87,61 @@ if __name__ == '__main__':
 
     # pyFast.max_test()
     # pyFast.deepcopy_test()
-    pyFast.isinstance_test()
+    # pyFast.isinstance_test()
+    # print(pyFast.compact([True, False, 1, "2223"]))
+
+    stuendt = pyStaticTest.student()
+
+    # get
+    print(stuendt.var)  # 100
+    # print(stuendt.var1) #AttributeError: 'student' object has no attribute 'var1'
+
+    """
+        可以推测出 是先从该实例中的成员变量中找，再从该类的静态变量中找
+        
+        # 伪代码
+    
+        def get_variable(variable_name):
+            # 该实例中的成员变量序列
+            instance_variable_list
+            for item in instance_variable_list:
+                 if item.name == variable_name:
+                    return item
+            # 从该类的静态变量中找
+            cls_static_variable_list
+               for item in cls_static_variable_list:
+                 if item.name == variable_name:
+                    return item
+            #....
+            找不到抛出异常
+            throw(AttributeError: 'student' object has no attribute 'var1')
+    """
+
+    # set
+    stuendt.var = 999
+
+    """
+        def set_variable(variable_name,value):
+            
+            try:
+                variable = get_variable(variable_name)
+            except:
+               #dosomthing
+            finally:
+                #没有这个字段 那么就构建一个字段
+                variable = instance.add(variable_name)
+                variable.value = value
+ 
+   """
+
+    # https://github.com/python/cpython/tree/main/Objects
+    "https://www.cnblogs.com/Alight/p/9610074.html"
+
+    print(stuendt.var)
+
+    print("static:", pyStaticTest.student.var)
 
     end_time = time.time()
     print("======>Time:{0}".format(end_time - start_time))
 
-    print(pyFast.compact([True, False, 1, "2223"]))
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

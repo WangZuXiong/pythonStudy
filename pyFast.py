@@ -1,6 +1,7 @@
 from collections import Counter
 from copy import deepcopy
 import re
+from do_cprofile import do_cprofile
 
 
 # 字符元素组成判定  检查两个字符串的组成元素是不是一样的
@@ -81,7 +82,20 @@ def re_find_all():
     print(t)  # ['A', 'a', 'a', 'b', 'c']
 
 
+@do_cprofile("./mkm_run.prof")
 def max_test():
+    try:
+        exception_func()
+    except:
+        import traceback, sys
+        ttype, tvalue, ttraceback = sys.exc_info()
+        traceback.print_tb(ttraceback)
+
+
+    import inspect
+    for t in inspect.stack():
+        print(t[0])
+
     lst = [1, 1, 1, 2, 3, 4]
     # list 里面出现频率最多的元素
     t = max(set(lst), key=lst.count)
@@ -114,4 +128,3 @@ def isinstance_test():
             result.extend(t)
 
     print(result)  # [4, 5, 6]  tuple is not list instance
-

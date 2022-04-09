@@ -3,7 +3,6 @@
 # 按 ⌃R 执行或将其替换为您的代码。
 # 按 双击 ⇧ 在所有地方搜索类、文件、工具窗口、操作和设置。
 import time
-
 import pyCoding
 import pyDataStructure
 import pyDictionary
@@ -14,12 +13,16 @@ import pyInputOutput
 import pyIter
 import pyList
 import pyLoop
-
+import pyStaticTest
 import pyNumber
 import pySet
 import pyString
 import pyTuple
 import gameLoop
+import cProfile
+import re
+from Test import Test
+
 
 def print_hi(name):
     # 在下面的代码行中使用断点来调试脚本。
@@ -28,8 +31,34 @@ def print_hi(name):
     print("打印字符串： {} ".format(name))
 
 
+# import inspect
+#
+#
+# def get_current_function_name():
+#     return inspect.stack()  # [1][3]
+#
+#
+# class MyClass:
+#     def function_one(self):
+#         # print("%s.%s invoked" % (self.__class__.__name__, get_current_function_name()))
+#         lst = get_current_function_name()
+#         index = 0
+#
+#         for t in lst:
+#             index1 = 0
+#             for t1 in t:
+#                 print(index1, t1)
+#                 index1 += 1
+#             index += 1
+#
+#
+# if __name__ == '__main__':
+#     myclass = MyClass()
+#     myclass.function_one()
+
 # 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
+    # 设置环境变量
     start_time = time.time()
     pass
 
@@ -81,6 +110,7 @@ if __name__ == '__main__':
     # pyInputOutput.write_file()
     # pyInputOutput.pickle_test()
     # pyErrorExecptions.foo()
+
     # pyFast.zip_test()
     # pyFast.str_combin()
     # pyFast.re_find_all()
@@ -88,7 +118,14 @@ if __name__ == '__main__':
     # pyFast.max_test()
     # pyFast.deepcopy_test()
     # pyFast.isinstance_test()
+
     gameLoop.run()
+
+    # print(pyFast.compact([True, False, 1, "2223"]))
+
+    # test = Test()
+    # cProfile.run('re.compile("foo|bar")')
+
     end_time = time.time()
     print("======>Time:{0}".format(end_time - start_time))
 

@@ -1,6 +1,7 @@
 from collections import Counter
 from copy import deepcopy
 import re
+from do_cprofile import do_cprofile
 
 
 # 字符元素组成判定  检查两个字符串的组成元素是不是一样的
@@ -33,6 +34,19 @@ def split_list(raw_list, count):
             group_index += 1
         result[group_index].append(data)
     return result
+
+
+def compact(lst):
+    # 过滤函数
+    def filter_function(obj):
+        if type(obj) == bool:
+            return False
+        return True
+
+    # filter_function 返回是True时  就会过滤掉这个元素
+    temp = filter(filter_function, lst)
+    print(temp)  # <filter object at 0x000002C3E1A873A0>
+    return list(temp)
 
 
 def zip_test():
@@ -68,7 +82,20 @@ def re_find_all():
     print(t)  # ['A', 'a', 'a', 'b', 'c']
 
 
+@do_cprofile("./mkm_run.prof")
 def max_test():
+    try:
+        exception_func()
+    except:
+        import traceback, sys
+        ttype, tvalue, ttraceback = sys.exc_info()
+        traceback.print_tb(ttraceback)
+
+
+    import inspect
+    for t in inspect.stack():
+        print(t[0])
+
     lst = [1, 1, 1, 2, 3, 4]
     # list 里面出现频率最多的元素
     t = max(set(lst), key=lst.count)

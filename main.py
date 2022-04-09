@@ -19,7 +19,7 @@ import pyNumber
 import pySet
 import pyString
 import pyTuple
-
+import gameLoop
 
 def print_hi(name):
     # 在下面的代码行中使用断点来调试脚本。
@@ -32,6 +32,7 @@ def print_hi(name):
 if __name__ == '__main__':
     start_time = time.time()
     pass
+
     # pyNumber.foo()
     # pyString.foo()
     # print_hi('PyCharm')
@@ -86,10 +87,8 @@ if __name__ == '__main__':
 
     # pyFast.max_test()
     # pyFast.deepcopy_test()
-    pyFast.isinstance_test()
-
-
-
+    # pyFast.isinstance_test()
+    gameLoop.run()
     end_time = time.time()
     print("======>Time:{0}".format(end_time - start_time))
 

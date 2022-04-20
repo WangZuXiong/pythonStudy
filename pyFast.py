@@ -2,6 +2,7 @@ from collections import Counter
 from copy import deepcopy
 import re
 from do_cprofile import do_cprofile
+from time_profile import time_profile
 
 
 # 字符元素组成判定  检查两个字符串的组成元素是不是一样的
@@ -82,14 +83,15 @@ def re_find_all():
     print(t)  # ['A', 'a', 'a', 'b', 'c']
 
 
-@do_cprofile("./mkm_run.prof")
+# @do_cprofile("./mkm_run.prof")
+@time_profile
 def max_test():
-    try:
-        exception_func()
-    except:
-        import traceback, sys
-        ttype, tvalue, ttraceback = sys.exc_info()
-        traceback.print_tb(ttraceback)
+    # try:
+    #     exception_func()
+    # except:
+    #     import traceback, sys
+    #     ttype, tvalue, ttraceback = sys.exc_info()
+    #     traceback.print_tb(ttraceback)
 
 
     import inspect

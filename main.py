@@ -21,7 +21,8 @@ import pyTuple
 import cProfile
 import re
 from Test import Test
-
+import Utiltity
+import generator_test
 
 def print_hi(name):
     # 在下面的代码行中使用断点来调试脚本。
@@ -60,6 +61,7 @@ if __name__ == '__main__':
     # 设置环境变量
     start_time = time.time()
     pass
+
     # pyNumber.foo()
     # pyString.foo()
     # print_hi('PyCharm')
@@ -113,7 +115,7 @@ if __name__ == '__main__':
     # pyFast.str_combin()
     # pyFast.re_find_all()
 
-    pyFast.max_test()
+    # pyFast.max_test()
     # pyFast.deepcopy_test()
     # pyFast.isinstance_test()
     # print(pyFast.compact([True, False, 1, "2223"]))
@@ -121,7 +123,23 @@ if __name__ == '__main__':
     # test = Test()
     # cProfile.run('re.compile("foo|bar")')
 
-    end_time = time.time()
-    print("======>Time:{0}".format(end_time - start_time))
+    # print(Utiltity.rgb_to_html_color((255,255,255)))
+    # print(Utiltity.html_color_to_rgb("#FFFFFF"))
+    #
+    # end_time = time.time()
+    # print("======>Time:{0}".format(end_time - start_time))
+
+    lst_a = [1, 2, 7, 8, 9, 10]
+    lst_b = [3, 9, 100]
+    test = Test()
+
+    t = test.combin_lst(lst_a, lst_b)
+    print(t)
+    print("---")
+
+    # pyFast.max_test()
+
+    generator_test.foo()
+
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助

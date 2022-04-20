@@ -18,6 +18,7 @@ import pyNumber
 import pySet
 import pyString
 import pyTuple
+import gameLoop
 import cProfile
 import re
 from Test import Test
@@ -118,6 +119,9 @@ if __name__ == '__main__':
     # pyFast.max_test()
     # pyFast.deepcopy_test()
     # pyFast.isinstance_test()
+
+    gameLoop.run()
+
     # print(pyFast.compact([True, False, 1, "2223"]))
 
     # test = Test()

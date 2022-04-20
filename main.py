@@ -133,13 +133,13 @@ if __name__ == '__main__':
     # end_time = time.time()
     # print("======>Time:{0}".format(end_time - start_time))
 
-    lst_a = [1, 2, 7, 8, 9, 10]
-    lst_b = [3, 9, 100]
-    test = Test()
-
-    t = test.combin_lst(lst_a, lst_b)
-    print(t)
-    print("---")
+    # lst_a = [1, 2, 7, 8, 9, 10]
+    # lst_b = [3, 9, 100]
+    # test = Test()
+    #
+    # t = test.combin_lst(lst_a, lst_b)
+    # print(t)
+    # print("---")
 
     # pyFast.max_test()
 

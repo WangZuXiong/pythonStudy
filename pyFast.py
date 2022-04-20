@@ -2,7 +2,7 @@ from collections import Counter
 from copy import deepcopy
 import re
 from do_cprofile import do_cprofile
-from time_profile import time_profile
+from time_profile import time_me
 
 
 # 字符元素组成判定  检查两个字符串的组成元素是不是一样的
@@ -84,7 +84,7 @@ def re_find_all():
 
 
 # @do_cprofile("./mkm_run.prof")
-@time_profile
+@time_me
 def max_test():
     # try:
     #     exception_func()

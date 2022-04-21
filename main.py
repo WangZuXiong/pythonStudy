@@ -120,7 +120,7 @@ if __name__ == '__main__':
     # pyFast.deepcopy_test()
     # pyFast.isinstance_test()
 
-    gameLoop.run()
+    # gameLoop.run()
 
     # print(pyFast.compact([True, False, 1, "2223"]))
 

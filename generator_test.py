@@ -37,7 +37,10 @@ def foo():
 
     print()
     print("------------------")
-    # send 的
+
+    # result = next()  result 就是yield返回的东西
+    # send 等价于  调用了next()+发送了消息给生成器，生成器用yield前的变量来接受消息
+    # result = send()  result 就是yield返回的东西
 
     def fun():
         r = 1
@@ -51,10 +54,39 @@ def foo():
     g5 = fun()
 
     print(next(g5))
-    print(g5.send(100))
+    print(send_result := g5.send(100))
+    print(send_result)
     # print(next(g5))
     # print(next(g5))
 
+    print("------------------")
+
+    g6 = start()
+    excute(g6)
+
+
+def excute(generator):
+    for elem in generator:
+        result = elem.send(None)
+        if isinstance(result, Generator):
+            excute(result)
+        else:
+            print(result)
+
+
+def step1():
+    print('===> step1')
+    yield 1
+
+def step2():
+    print('===> step1')
+    yield 2
+
+
+def start():
+    yield step1()
+    yield step2()
+    print("finished")
 
 
 
